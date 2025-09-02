@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Lexend';
+  scroll-behaviour: smooth;
 }
 
 header {
@@ -105,3 +106,4 @@ footer h2 {
   font-size: 30px;
 
 }
+
