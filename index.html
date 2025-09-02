@@ -178,19 +178,8 @@ git push</code></pre>
         <h2>1° Info</h2>
     </footer>
 
-    <script>
-        document.querySelectorAll('.links a').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').replace('#', '');
-                const target = document.getElementById(targetId);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
 
 
 </html>
+
