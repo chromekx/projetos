@@ -14,6 +14,7 @@ header {
   align-items: center;
   position: sticky;
   margin-bottom: 80px;
+  transition: 0.3s ease-in;
 }
 
 .links a {
@@ -102,4 +103,5 @@ footer h1 {
 
 footer h2 {
   font-size: 30px;
+
 }
