@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Complexo do Git</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Bungee&family=Gravitas+One&family=Lexend:wght@100..900&
+    family=Outfit:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="git-commit.svg">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo">Comandos Linux e Comandos Git</h1>
+        <div class="links">
+            <a href="#gits">Git e GitHub</a>
+            <a href="#comandos">Comandos</a>
+            <a href="#repositorios">Repositórios</a>
+        </div>
+    </header>
+    <div class="containers">
+        <div class="container" id="gits">
+            <span class="label" for="#gits">Git e Github</span>
+            <div class="git">
+                <h1>O que é o Git?</h1>
+                <p>O Git é um sistema de controle de versão distribuído. Registra históricos de alterações
+                    em arquivos (normalmente código), permite criar branches
+                    (linhas de desenvolvimento) e voltar a estados anteriores. Foi feito para
+                    rastrear mudanças e evitar que equipes destruam trabalho umas das outras
+                    por acidente.</p>
+            </div>
+            <div class="github">
+                <h1>O que é o GitHub?</h1>
+                <p>O GitHub é uma plataforma online que hospeda repositórios Git. Oferece interface web, issues,
+                    pull requests, integração contínua e ferramentas de colaboração. GitHub
+                    não substitui o Git: ele usa Git como tecnologia subjacente, fornece
+                    hospedagem e funcionalidades sociais.</p>
+            </div>
+            <div class="dif">
+                <h1>Quais são suas diferenças?</h1>
+                <p><span style="font-weight: bold;">1 - </span>Git: ferramenta local (linha de comando ou GUI), controla versão no seu computador.<br>
+                    <span style="font-weight: bold;">2 - </span>GitHub: serviço remoto (web) que armazena repositórios Git e adiciona recursos
+                    sociais/colaborativos.<br>
+                    <span style="font-weight: bold;">3 - </span>Você pode usar Git sem GitHub; não dá pra usar GitHub sem Git.</p>
+            </div>
+        </div>
+        
+        <div class="container" id="comandos" style="justify-content: space-evenly;">
+            <span class="label" for="#comandos">Comandos</span>
+            <div class="gitbash">
+                <h1>Principais Comandos do GitBash</h1>
+                <p>
+                <pre><code class="language-bash">## Definir seu nome
+git config --global user.name "Seu nome"
+
+## Definir seu email
+git config --global user.email seu@email
+
+## Iniciar o rastreamento do git na pasta atual
+git init
+
+## Pedir dados do rastreamento do git, como arquivos não rastreados
+git status
+
+## Adicionar um arquivo ao rastreamento do git
+git add arquivo
+
+## Verificar o log das atualizações
+git log
+
+## Gerar uma versão do projeto
+git commit -m "explicação"
+
+
+
+
+
+
+</code></pre>
+                </p>
+            </div>
+            <div class="linux">
+                <h1>Principais Comandos do Linux</h1>
+                <p>
+                <pre><code class="language-bash">## Cria uma pasta (diretório)
+mkdir pasta/
+
+## Criar um arquivo
+touch arquivo
+
+## Remove um diretório (pasta)
+cd -r pasta
+
+## Voltar dentro de uma pasta
+cd ..
+
+## Renomear pasta
+mv pasta pasta01
+
+## Mostrar conteúdo da pasta
+ls pasta
+
+## Iniciar o rastreamento do git na pasta atual
+git init
+
+## Criar um arquivo
+touch arquivo
+
+## Abrir o arquivo no VSCode
+code .</code></pre>
+                </p>
+            </div>
+        </div>
+
+        <div class="container" id="repositorios">
+            <span class="label" for="#gits">Repositórios</span>
+            <div class="repos1">
+                <h1>Como eu crio um Repositório no GitHub?</h1>
+                <p><span style="font-weight: bold;">1 - </span>Faça login no site do GitHub<br>
+                    <span style="font-weight: bold;">2 - </span>Clique no botão "New repository".<br>
+                    <span style="font-weight: bold;">3 - </span>Preencha o nome do repositório, descrição, 
+                    e escolha se ele será público ou privado.<br>
+            </div>
+            <div class="repos2">
+                <h1>Como eu ligo um projeto existente no GitHub no meu PC?</h1>
+                <p>
+                <pre><code class="language-bash">git commit -m "commit"
+# adicionar o repositório remoto -
+-> substitua o link pelo que foi copiado do GitHub
+git remote add origin (link copiado)
+git push -u origin main
+
+
+</code></pre>
+                </p>
+            </div>
+
+            <div class="repos3">
+                <h1>Como eu gero uma versão do projeto com o Git?</h1>
+                <p>
+                <pre><code class="language-bash"># criar um commit
+git commit -m "Descrição clara da mudança"
+# criar uma tag anotada para marcar uma versão
+git tag -a v1.0.0 -m "Versão 1.0.0"
+# enviar tags para o remoto
+git push origin --tags
+
+</code></pre>
+                </p>
+            </div>
+
+            <div class="repos4">
+                <h1>Como eu envio do meu PC para o Github?</h1>
+                <p>
+                <pre><code class="language-bash"># garantir que você tem rep. remoto configurado
+git remote -v
+# enviar a branch atual para o remoto -
+-> só precisa do -u na primeira vez
+git push -u origin main
+# nas próximas vezes, só
+git push</code></pre>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="#rodape">
+        <h1>Victor Henrique Souza</h1>
+        <h2>1° Info</h2>
+    </footer>
+</body>
+
+</html>
